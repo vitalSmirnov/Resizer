@@ -39,11 +39,7 @@
 
 ### About the app
 
-This sample app provides you with boilerplate setup and configuration that you can further customize to build your own app.
+This app can resize selected image references and download them
 
-<!-- describe shortly the purpose of the sample app -->
-
-Built using [`create-miro-app`](https://www.npmjs.com/package/create-miro-app).
 
 This app uses [Vite](https://vitejs.dev/). \
-If you want to modify the `vite.config.js` configuration, see the [Vite documentation](https://vitejs.dev/guide/).
