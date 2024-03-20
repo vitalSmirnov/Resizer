@@ -1,5 +1,6 @@
 import { Image } from '@mirohq/websdk-types'
 
+const token = import.meta.env.VITE_MIRO_TOKEN
 export const getImageSelection = async () => {
   const response = (await miro.board.getSelection()) as Image[]
   return response.filter(item => item.type === 'image')
@@ -11,7 +12,7 @@ export const getImageUrl = async (url: string, name: number) => {
     let httpsImageUrl = imageUrl.replace('redirect=false', 'redirect=true')
     httpsImageUrl = httpsImageUrl.replace('http', 'https')
     const image = await fetch(`${httpsImageUrl}`, {
-      headers: { Authorization: `Bearer eyJtaXJvLm9yaWdpbiI6ImV1MDEifQ_G92i_EW6u0lh2VqFDd4PpWrFQlc` },
+      headers: { Authorization: `Bearer ${token}` },
     })
     const imageBlog = await image.blob()
     const imageURL = URL.createObjectURL(imageBlog)

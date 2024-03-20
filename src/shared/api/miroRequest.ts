@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { GetImagePayload, GetImageResponse } from './miroDataSource'
 
-const token = process.env['REACT_APP_MIRO']
+const token = import.meta.env.VITE_MIRO_TOKEN
 
 const instance = axios.create({
   baseURL: 'https://api.miro.com/v2/boards/',
