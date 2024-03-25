@@ -4,8 +4,10 @@ import * as React from 'react'
 export const Main = () => {
   return (
     <>
-      <Resizer />
-      <Downloader />
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        <Resizer />
+        <Downloader />
+      </div>
     </>
   )
 }

@@ -28,3 +28,8 @@ export const getImageUrl = async (url: string, name: number) => {
     return false
   }
 }
+
+export const getTableId = async () => {
+  const info = await miro.board.getInfo()
+  return info.id
+}

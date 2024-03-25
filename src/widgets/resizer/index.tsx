@@ -13,16 +13,23 @@ export const Resizer = () => {
   }
 
   return (
-    <>
-      <Input<number>
-        label={'Size'}
-        onChange={sizeHandler}
-        value={selectedSize}
-      />
-      <Button
-        title={'Resize items'}
-        onClick={resizerHandler}
-      />
-    </>
+    <div className={'grid'}>
+      <div className={'cs1 ce8'}>
+        <Input<number>
+          label={'Size'}
+          onChange={sizeHandler}
+          value={selectedSize}
+        />
+      </div>
+      <div
+        className={'cs9 ce12 centered'}
+        style={{ marginTop: '0.8rem' }}
+      >
+        <Button
+          icon={<span className='icon icon-collapse'></span>}
+          onClick={resizerHandler}
+        />
+      </div>
+    </div>
   )
 }

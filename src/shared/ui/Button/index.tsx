@@ -1,19 +1,19 @@
-import { HTMLAttributes } from 'react'
+import { HTMLAttributes, JSX } from 'react'
 
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   severity?: 'primary' | 'secondary'
+  icon?: JSX.Element
   disabled?: boolean
 }
-export const Button = ({ onClick, title, severity = 'primary', disabled }: ButtonProps) => {
+export const Button = ({ onClick, title, icon, severity = 'primary', disabled }: ButtonProps) => {
   return (
-    <div className={'cs1 ce12'}>
-      <button
-        disabled={disabled}
-        onClick={onClick}
-        className={`button button-${severity}`}
-      >
-        {title}
-      </button>
-    </div>
+    <button
+      disabled={disabled}
+      onClick={onClick}
+      className={`button button-${severity}`}
+    >
+      {icon}
+      {title}
+    </button>
   )
 }
