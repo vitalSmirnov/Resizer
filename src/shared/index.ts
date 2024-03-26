@@ -1,2 +1,2 @@
 export * from './ui'
-export * from './api/miroRequest'
+export * from './api/getImage/miroRequest'

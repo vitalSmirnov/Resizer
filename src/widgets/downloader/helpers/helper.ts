@@ -1,6 +1,6 @@
 import { Image } from '@mirohq/websdk-types'
 
-const token = import.meta.env.VITE_MIRO_TOKEN
+const token = localStorage.getItem('token')
 export const getImageSelection = async () => {
   const response = (await miro.board.getSelection()) as Image[]
   return response.filter(item => item.type === 'image')

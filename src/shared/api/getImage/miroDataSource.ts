@@ -1,4 +1,4 @@
-import { Image } from '../../entities'
+import { Image } from '../../../entities'
 
 export interface GetImagePayload {
   imageId: string
